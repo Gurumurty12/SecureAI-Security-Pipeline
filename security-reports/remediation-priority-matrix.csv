@@ -1,0 +1,6 @@
+Priority,Finding ID,Location,Finding,Severity (1-5),Exploitability (1-5),Risk score,CWE/classification,Remediation,Estimated time,Status,Evidence/assumptions
+1,SRC-01,demo_code_1.py:29-51,Unsafe pickle deserialization pattern,,,,CWE-502,Avoid untrusted pickle; safer model format; verify provenance,2-6 hours (confirm design),Open,Manual source review; exposure depends on trust boundary
+2,SRC-02,demo_code_1.py:95-110,Training data poisoning due to missing validation,,,,ML data-integrity risk,"Add provenance, label/range checks, anomaly detection and holdout tests",4-8 hours for baseline controls,Open,Manual source review; may not be detectable by static scanners
+3,SRC-03,demo_code_1.py:147-179,Model extraction risk from detailed predictions and absent rate limiting,,,,Model/API abuse risk,"Minimize response detail; authentication, quotas, monitoring",4-8 hours for baseline controls,Open,Demo is local simulation; no network API shown
+4,TBD,TBD,Add only if confirmed by scans/source review,,,,,TBD,TBD,Pending,Do not invent findings
+5,TBD,TBD,Add only if confirmed by scans/source review,,,,,TBD,TBD,Pending,Do not invent findings
