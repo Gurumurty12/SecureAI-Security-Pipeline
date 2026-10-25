@@ -1,4 +1,3 @@
-```yaml
 name: SecureAI Security Scans
 
 'on':
@@ -58,4 +57,3 @@ jobs:
           path: security-reports/
           if-no-files-found: warn
           retention-days: 30
-```
