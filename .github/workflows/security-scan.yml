@@ -1,7 +1,7 @@
 ```yaml
 name: SecureAI Security Scans
 
-on:
+'on':
   push:
     branches: [main, master]
   pull_request:
@@ -70,7 +70,7 @@ jobs:
         if: always()
         run: |
           if [ "${{ steps.bandit.outcome }}" = "failure" ] || [ "${{ steps.semgrep.outcome }}" = "failure" ] || [ "${{ steps.dependencies.outcome }}" = "failure" ]; then
-            echo "Security findings or scan errors detected. Review uploaded reports."
+            echo "Security scan failed. Review the uploaded reports."
             exit 1
           fi
 ```
